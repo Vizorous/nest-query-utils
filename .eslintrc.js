@@ -15,6 +15,7 @@ module.exports = {
 		"plugin:prettier/recommended",
 	],
 	rules: {
+		"no-irregular-whitespace": 0,
 		"@typescript-eslint/ban-types": "off",
 		"@typescript-eslint/no-unsafe-return": "off",
 		indent: "off",
