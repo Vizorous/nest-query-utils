@@ -26,7 +26,7 @@ It combines {@link Column}, {@link Field} and {@link Expose} decorators. You can
  * @param {CFOptions} options {@link CFOptions}  for the decorator.
  * @param CustomFieldDecorator - The custom decorator to use for the field.
  */
-export default function CF(
+export function CF(
 	options?: CFOptions,
 	CustomFieldDecorator: typeof Field = Field
 ): any {

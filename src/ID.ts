@@ -2,7 +2,7 @@ import { ReturnTypeFunc } from "@nestjs/graphql";
 import { IDField, IDFieldOptions } from "@vizorous/nestjs-query-graphql";
 import { Expose, ExposeOptions } from "class-transformer";
 
-export default function IDExpose(
+export function IDExpose(
 	returnTypeFunc: ReturnTypeFunc,
 	options?: { idOptions?: IDFieldOptions; exposeOptions?: ExposeOptions }
 ): any {

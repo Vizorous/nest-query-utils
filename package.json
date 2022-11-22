@@ -1,6 +1,6 @@
 {
 	"name": "@vizorous/nest-query-utils",
-	"version": "0.0.1",
+	"version": "0.0.5",
 	"description": "Support tool library for nest-query",
 	"main": "./lib/index.js",
 	"files": [
@@ -42,9 +42,9 @@
 		"codecov"
 	],
 	"bugs": {
-		"url": "https://github.com/ryansonshine/typescript-npm-package-template/issues"
+		"url": "https://github.com/Vizorous/nest-query-utils.git/issues"
 	},
-	"homepage": "https://github.com/ryansonshine/typescript-npm-package-template#readme",
+	"homepage": "https://github.com/Vizorous/nest-query-utils.git#readme",
 	"devDependencies": {
 		"@ryansonshine/commitizen": "^4.2.8",
 		"@ryansonshine/cz-conventional-changelog": "^3.3.4",
@@ -120,6 +120,7 @@
 		]
 	},
 	"dependencies": {
+		"@nestjs/common": "^9.2.0",
 		"@nestjs/graphql": "^10.1.6",
 		"@vizorous/nestjs-query-graphql": "^1.1.2",
 		"class-transformer": "^0.5.1",

@@ -1,5 +1,5 @@
 import { ID, ObjectType } from "@nestjs/graphql";
-import { FilterableField, KeySet } from "@vizorous/nestjs-query-graphql";
+import { FilterableField } from "@vizorous/nestjs-query-graphql";
 import { Expose } from "class-transformer";
 import {
 	CreateDateColumn,
@@ -8,8 +8,7 @@ import {
 	PrimaryGeneratedColumn,
 	UpdateDateColumn,
 } from "typeorm";
-import IDExpose from "./ID";
-
+import { IDExpose } from "./ID";
 @ObjectType()
 @Entity()
 export class BaseEntity {

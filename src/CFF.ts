@@ -2,7 +2,7 @@ import {
 	FilterableField,
 	FilterableFieldOptions,
 } from "@vizorous/nestjs-query-graphql";
-import CF, { CFOptions } from "./CF";
+import { CF, CFOptions } from "./CF";
 
 /**
  * @description
@@ -24,6 +24,6 @@ It combines {@link Column}, {@link FilterableField} and {@link Expose} decorator
  * @param {CFFOptions} options {@link CFFOptions}  for the decorator.
  * @param CustomFieldDecorator - The custom decorator to use for the field.
  */
-export default function CFF(options?: CFFOptions) {
+export function CFF(options?: CFFOptions) {
 	return CF(options, FilterableField);
 }

@@ -1,4 +1,16 @@
-# Support tool library for Nest Query
+# Nest Query Utils
+
+### by [_Vizorous_](https://github.com/vizorous)
+
+---
+
+## Install
+
+```bash
+npm install @vizorous/nest-query-utils
+yarn add @vizorous/nest-query-utils
+pnpm add @vizorous/nest-query-utils
+```
 
 ## @CF
 
@@ -72,7 +84,33 @@
   }
   ```
 
+## CreateType
+
+- Creates a DTO class for creation with unnecessary fields such as createdAt, updatedAt, etc. omitted. You can omit other fields as well by passing a list of fields to omit to omitKeys.
+  ```typescript
+  @InputType()
+  export class CreateTodo extends CreateType(Todo, [
+  	"done",
+  	"subTasks",
+  	"category",
+  ]) {
+  	//you can add more custom fields here
+  }
+  ```
+
+## UpdateType
+
+- Creates a DTO class for update with unnecessary fields omitted AND required fields set. You can omit other fields as well by passing a list of fields to omit to omitKeys.
+
+  ```typescript
+  @InputType()
+  export class UpdateTodo extends UpdateType(Todo, ["category"], ["done"]) {
+  	//you can add more custom fields here
+  }
+  ```
+
 ## @IDExpose()
+
 - Combination of [@IDField](https://tripss.github.io/nestjs-query/docs/graphql/dtos#idfield) and @Expose decorators.
 
 ```typescript
@@ -86,6 +124,6 @@ import { Entity, PrimaryGeneratedColumn } from "typeorm";
 export class User {
 	@IDExpose(() => ID, { idOptions: { allowedComparisons: ["eq", "in"] } })
 	@PrimaryGeneratedColumn("uuid")
-  id: string;
+	id: string;
 }
 ```
